@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Agenda</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" media="screen" charset="utf-8">
+  </head>
+  <body ng-app="app">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu-nav" aria-expanded="fase">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">Descomplica</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-menu-nav">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspooup="true" aria-expanded="false">Usuários <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#/user/register">Criar</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspooup="true" aria-expanded="false">Contacts<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#/contacts/list">List</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid view">
+      <div ng-view></div>
+    </div>
+
+    <script type="text/javascript" src="libs/js/jquery/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/js/angular/angular.min.js"></script>
+    <script type="text/javascript" src="libs/js/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="libs/js/angular/angular-resource.min.js"></script>
+    <script type="text/javascript" src="libs/js/angular/angular-animate.min.js"></script>
+    <script type="text/javascript" src="libs/js/angular/angular-touch.min.js"></script>
+    <script type="text/javascript" src="libs/js/angular/ui/ui-bootstrap-tpls-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/service.js"></script>
+    <script type="text/javascript" src="js/controller/listCtrl.js"></script>
+    <script type="text/javascript" src="js/controller/UserRegisterCtrl.js"></script>
+  </body>
+</html>

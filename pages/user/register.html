@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Registrar usuário</div>
+  <div class="panel-body">
+    <form class="form-horizontal">
+
+      <div class="form-group">
+        <label for="name" class="col-md-4 control-label">Nome</label>
+        <div class="col-md-6">
+          <input id="name" type="text" ng-model="user.name" class="form-control" placeholder="Nome">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="col-md-4 control-label">Email</label>
+        <div class="col-md-6">
+          <input id="email" type="text" ng-model="user.email" class="form-control" placeholder="Email">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="col-md-4 control-label">Senha</label>
+        <div class="col-md-6">
+          <input id="password" type="password" ng-model="user.password" class="form-control" placeholder="Senha">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password-confirm" class="col-md-4 control-label">Confirme a senha</label>
+        <div class="col-md-6">
+          <input id="password-confirm" type="password" ng-model="user.password2" class="form-control" placeholder="Confirme a senha">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" name="register" ng-click="save(user)">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
