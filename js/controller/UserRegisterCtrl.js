@@ -1,11 +1,30 @@
-app.controller('UserRegisterCtrl', ['$scope', '$resource', '$log', function($scope, $resource, $log){
+//app.controller('employeesController', function($scope, $http, API_URL) {
+app.controller('UserRegisterCtrl', function($scope, $http, $log, API, BASE_URL){
+  console.log('controller UserRegisterCtrl');
+  console.log('API: '+API);
+  console.log('Base url: '+BASE_URL);
+
+  $scope.test = function(){
+    console.log('test called');
+  }
+
   $scope.save = function(user){
     var myUser = angular.copy(user);
-    $scope.user = {};
-    console.log('user -> '+user.name);
-    var rest = $resource('http://agenda.be/register');
-    rest.save(myUser, function(){
-      console.log('User saved');
+    user = {};
+    console.log('save called');
+    console.log('user name '+JSON.stringify(myUser));
+    $http({
+      method: 'POST',
+      url: BASE_URL + 'register',
+      data: $.param(myUser),
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    }).success(function(response){
+      console.log('success response: '+JSON.stringify(response));
+      //location.reload();
+    }).error(function(response){
+      console.log('error response: '+JSON.stringify(response));
+      //location.reload();
     });
-  };
-}]);
+  }
+
+});
