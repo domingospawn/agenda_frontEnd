@@ -13,6 +13,10 @@ app.config(function($routeProvider, $httpProvider){
     templateUrl: 'pages/contacts/list.html',
     controller: 'listCtrl'
   })
+  .when('/contacts/insert', {
+    templateUrl: 'pages/contacts/insert.html',
+    controller: 'contactCtrl'
+  })
   .when('/user/register', {
     templateUrl: 'pages/user/register.html',
     controller: 'UserRegisterCtrl'

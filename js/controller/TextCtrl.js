@@ -13,6 +13,7 @@ app.controller('TextCtrl', function($scope, $http, $log, $cookies, API, BASE_URL
 
     $http(req).then(function(resp){
       console.log('Deu certo? '+JSON.stringify(resp));
+      console.log('retorno '+resp.data);
     },
     function(){
       console.log('Deu errado');
