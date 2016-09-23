@@ -3,7 +3,8 @@ var app = angular.module("app", ["ngRoute", "ngResource", "ui.bootstrap", "ngCoo
   .constant("BASE_URL", "http://agenda.be/");
     //.constant("CSRF_TOKEN", '{!! csrf_token() !!}');
 
-app.config(function($routeProvider){
+app.config(function($routeProvider, $httpProvider){
+
   $routeProvider
   .when("/", {
     templateUrl: "pages/main.html"
